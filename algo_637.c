@@ -20,8 +20,8 @@ double* averageOfLevels(struct TreeNode* root, int* returnSize){
     int iLevelNum[100000]; //最大1000层,记录每层节点数
     int iLevelCount = 0; //记录总层数
     double dSumArray[100000]; //每层val和
-    memset(iLevelNum,0,100000*sizeof(int)); //不初始化会出错
-    memset(dSumArray,0,100000*sizeof(double)); //不初始化会出错
+    memset(iLevelNum,0,100000*sizeof(int)); //不初始化其值不确定，有可能产生运行时错误
+    memset(dSumArray,0,100000*sizeof(double)); //不初始化其值不确定，有可能产生运行时错误
     pRetArray[0] = root;
     if(!pRetArray[0])
     {
